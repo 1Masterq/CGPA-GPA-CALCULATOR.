@@ -1,1 +1,142 @@
+ body {
+    font-family: Arial, sans-serif;
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f7f9fc;
+    color: #1a1a1a;
+    transition: 0.4s ease;
+}
+    h1, h2 {
+      text-align: center;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      padding: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin: 0.8rem 0 0.3rem;
+      font-weight: 600;
+    }
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      display: block;
+      width: 100%;
+      margin-top: 1.2rem;
+      padding: 0.95rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #2d6cdf;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2654bb;
+    }
+    .result {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #eef4ff;
+      border: 1px solid #cbd7f0;
+    }
+    
+    /* Dark Mode */
 
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .card {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background: #2d2d2d;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode .result {
+    background: #252525;
+    border: 1px solid #555;
+}
+
+body.dark-mode button {
+    background: #4a90e2;
+}
+
+body.dark-mode button:hover {
+    background: #3578d6;
+}
+
+/* Toggle Switch */
+
+.theme-switch{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.switch{
+    position:relative;
+    display:inline-block;
+    width:55px;
+    height:28px;
+}
+
+.switch input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+
+.slider{
+    position:absolute;
+    cursor:pointer;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#ccc;
+    transition:.4s;
+    border-radius:34px;
+}
+
+.slider:before{
+    position:absolute;
+    content:"";
+    height:22px;
+    width:22px;
+    left:3px;
+    bottom:3px;
+    background:white;
+    transition:.4s;
+    border-radius:50%;
+}
+
+input:checked + .slider{
+    background:#2d6cdf;
+}
+
+input:checked + .slider:before{
+    transform:translateX(27px);
+}
