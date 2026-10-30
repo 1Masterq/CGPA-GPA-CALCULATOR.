@@ -64,7 +64,7 @@ const subjectsEl = document.getElementById("subjects");
   } else if (cgpa >= 3.50) {
     return "🥈 Second Class Upper (2:1)";
   } else if (cgpa >= 2.40) {
-    return "🥉 Second Class Lower (2:2)";
+    return "🥉 Second Class Lower (2:2)" (strong 2:2);
   } else if (cgpa >= 1.50) {
     return "🎓 Third Class";
   } else if (cgpa >= 1.00) {
